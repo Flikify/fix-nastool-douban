@@ -12,5 +12,9 @@
 docker cp nas-tools:/nas-tools/app/media/doubanapi/webapi.py /root
 # 拷贝修复后的webapi.py覆盖到nastool容器内
 docker cp /root/project/webapi.py nas-tools:/nas-tools/app/media/doubanapi/webapi.py
+# 重启容器（替换容器id为你的容器id）
+docker restart 容器id
 ```
-
+4. 重启完毕后登陆nastool - > 服务 - > 豆瓣想看
+5. 打开实时日志查看是否恢复
+6. ![image-20230819020154718](http://file.92coco.cn/markdown_img/4828f8a306a541d5a10cbb4e7b56f60d.png)
