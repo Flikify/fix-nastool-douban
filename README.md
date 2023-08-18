@@ -1,4 +1,4 @@
-# fixed-nastool-douban
+# fix-nastool-douban
 修复豆瓣想看无法获取数据的问题
 
 ## docker 安装修复方法
