@@ -9,9 +9,9 @@
 
 ```shell
 # 备份源文件到/root目录下
-docker cp nas-tools:/nas-tools/app/media/doubanapi/webapi.py /root
+docker cp 容器id:/nas-tools/app/media/doubanapi/webapi.py /root
 # 拷贝修复后的webapi.py覆盖到nastool容器内
-docker cp /root/project/webapi.py nas-tools:/nas-tools/app/media/doubanapi/webapi.py
+docker cp /root/project/webapi.py 容器id:/nas-tools/app/media/doubanapi/webapi.py
 # 重启容器（替换容器id为你的容器id）
 docker restart 容器id
 ```
