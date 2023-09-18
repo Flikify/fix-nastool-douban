@@ -8,8 +8,13 @@
 3. 执行以下命令
 
 ## docker 修复镜像
-> docker pull flik007/nastools-fixed
-> GitHub： https://github.com/Flik6/nas-tools
+```
+
+docker pull flik007/nastools-fixed
+
+```
+GitHub： https://github.com/Flik6/nas-tools
+
 使用方法与nastool官方相同
 
 
