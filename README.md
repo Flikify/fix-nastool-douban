@@ -7,6 +7,12 @@
 2. 拷贝修复后的webapi.py文件路径 例如(/root/project/webapi.py)
 3. 执行以下命令
 
+## docker 修复镜像
+> docker pull flik007/nastools-fixed
+> GitHub： https://github.com/Flik6/nas-tools
+使用方法与nastool官方相同
+
+
 ```shell
 # 备份源文件到/root目录下
 docker cp 容器id:/nas-tools/app/media/doubanapi/webapi.py /root
