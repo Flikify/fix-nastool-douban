@@ -1,22 +1,35 @@
 # fix-nastool-douban
 修复豆瓣想看无法获取数据的问题
 
-## docker 安装修复方法
+两种方法
+
+## 方法1 docker 修复镜像
+```shell
+
+docker pull flik007/nastools-fixed
+# 运行命令 将$DIR改为您需要在本地映射的文件夹
+docker run -d --privileged=true -u=root\
+    --restart unless-stopped \
+    --name nas-tools \
+    --hostname nas-tools \
+    --network=host \
+    -v $DIR/config:/config \
+    -v $DIR/nastools:/nastools \
+    -e PUID=0 \
+    -e PGID=0 \
+    -e UMASK=000 \
+    -e NASTOOL_AUTO_UPDATE=false \
+    flik007/nastools-fixed
+
+```
+GitHub： https://github.com/Flik6/nas-tools
+使用方法与nastool官方相同
+
+## 方法2 docker 安装修复方法
 
 1. 将修复后的webapi.py上传到服务器
 2. 拷贝修复后的webapi.py文件路径 例如(/root/project/webapi.py)
 3. 执行以下命令
-
-## docker 修复镜像
-```
-
-docker pull flik007/nastools-fixed
-
-```
-GitHub： https://github.com/Flik6/nas-tools
-
-使用方法与nastool官方相同
-
 
 ```shell
 # 备份源文件到/root目录下
